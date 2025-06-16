@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../dao/documento.py" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../dao/execSQL.py" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../dao/fieldslist.py" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../domain/tables/centro.py" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../domain/tables/conceito.py" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../domain/tables/empresa.py" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../domain/tables/subcentro.py" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../models/tables/centroModel.py" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../models/tables/conceitoModel.py" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../models/tables/empresaModel.py" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../models/tables/statuspagModel.py" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/../models/tables/subcentroModel.py" charset="windows-1252" />
+    <file url="PROJECT" charset="windows-1252" />
+  </component>
+</project>
