@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/../API">
+      <sourceFolder url="file://$MODULE_DIR$/../API/tables" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../API/views" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../domain">
+      <sourceFolder url="file://$MODULE_DIR$/../domain/tables" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../domain/views" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../util" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.11 (webclient)" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

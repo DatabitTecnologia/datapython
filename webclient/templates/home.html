@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistema WebClient for Databit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href= "{{ url_for('static',filename='bootstrap-icons/font/bootstrap-icons.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static',filename='css/style-databit.css') }}" rel="stylesheet"/>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='assets/img/favicon.png') }}" />
+</head>
+<body>
+<div class="wrapper">
+    <!-- Menu de Opções -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <img src="{{ url_for('static',filename='img/webclient_fundo_escuro.png') }}" class="center"/>
+        </div>
+        <ul class="list-unstyled components">
+            <p >Menu de Opções</p>
+            <li>
+                <a href="#opclientes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" ><i class="bi bi-person-vcard"></i>   Cadastro de Clientes</a>
+                <ul class="collapse list-unstyled" id="opclientes">
+                    <li>
+                        <a href="#" ><i class="bi bi-person-fill-check"></i>   Clientes Ativos</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="bi bi-person-check"></i></i>   Clientes Avulsos</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class="bi bi-currency-dollar"></i>  Definição de Propostas</a>
+                <a href="#opfunil" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="bi bi-funnel-fill"></i>   Funil de Vendas</a>
+                <ul class="collapse list-unstyled" id="opfunil">
+                    <li>
+                        <a href="#"><i class="bi bi-bookmark-star-fill"></i>   Categorias de Venda</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="bi bi-kanban"></i>   Status de Venda</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+            <a href="#opprodserv" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" ><i class="bi bi-wallet"></i>   Produtos / Serviços</a>
+                <ul class="collapse list-unstyled" id="opprodserv">
+                    <li>
+                        <a href="#" ><i class="bi bi-box"></i>  Definição de Produtos</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="bi bi-gear"></i>   Definição de Serviços</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class="bi bi-people"></i>   Cadastro de Usuários</a>
+            </li>
+       </ul>
+
+        <ul class="list-unstyled CTAs">
+           <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+           <img src="{{ url_for('static',filename='img/databit.png') }}" class="center2"/>
+           <p class="fonte1">COPYRIGTH(C) 2023 - DATABIT TECNOLOGIA E SISTEMAS - ALL RIGHTS RESERVED</p>
+        </ul>
+
+    </nav>
+    <!-- Barra Superior -->
+    <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light cor-azul-claro">
+            <div class="container-fluid">
+                <span class="input-group-text " id="basic-addon1"><i class="bi bi-search"></i></span>
+                <input type="text" class="form-control" placeholder="Termo a Procurar" aria-label="procura" aria-describedby="basic-addon1">
+            </div>
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="navbar-btn-redondo" data-toggle="tooltip" data-placement="bottom" title="Abrir ou fechar menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <button type="button" id="sobre" class="navbar-btn-redondo" data-toggle="tooltip" data-placement="bottom" title="Visite o nosso Site">
+                    <i class="bi bi-house-fill"></i>
+                </button>
+                <button type="button" id="suporte" class="navbar-btn-redondo" data-toggle="tooltip" data-placement="bottom" title="Central de Suporte">
+                    <i class="bi bi-question-circle-fill"></i>
+                </button>
+                <button type="button" id="facebook" class="navbar-btn-redondo" data-toggle="tooltip" data-placement="bottom" title="Visite nosso Facebook">
+                    <i class="bi bi-facebook"></i>
+                </button>
+                <button type="button" id="instagram" class="navbar-btn-redondo" data-toggle="tooltip" data-placement="bottom" title="Visite nosso Instagram">
+                    <i class="bi bi-instagram"></i>
+                </button>
+                <button type="button" id="youtube" class="navbar-btn-redondo" data-toggle="tooltip" data-placement="bottom" title="Visite nosso canal do Youtube">
+                    <i class="bi bi-youtube"></i>
+                </button>
+                <button type="button" id="whatsapp" class="navbar-btn-redondo" data-toggle="tooltip" data-placement="bottom" title="Acesse nosso WhatsAPP">
+                    <i class="bi bi-whatsapp"></i>
+                </button>
+                <button type="button" id="usuario" class="navbar-btn-redondo" data-toggle="tooltip" data-placement="bottom" title="Usuário logado" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="bi bi-person-fill"></i>
+                </button>
+
+           </div>
+
+        </nav>
+        <!-- Opções de Usuário -->
+        <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="width:350px;">
+            <div class="sidebar-header barra-titulo-offcanvas">
+                 <a class="fonte-titulo-offcanvas">Opções de Usuário</a>
+                 <button type="button" class="btn-close" style="float: right;" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="barra-usuario">
+                <table>
+                    <th>
+                       <img src="{{ url_for('static',filename='img/user.png') }}"  class="rounded-circle bg-white"/>
+                    </th>
+                    <th>
+                       <div style="margin-left:10px;">
+                           <a class="fonte-offcanvas-bold"> Usuário: </a> <a class="fonte-offcanvas">SIDNEY SANCHES</a></br>
+                           <a class="fonte-offcanvas-bold"> E-mail: </a> <a class="fonte-offcanvas">sistemas@databit.com.br</a></br>
+                           <a class="fonte-offcanvas-bold"> Telefone: </a> <a class="fonte-offcanvas">(31) 99252-2154</a></br>
+                           <a class="fonte-offcanvas-bold"> Tipo de Usuário: </a> <a class="fonte-offcanvas">Administrador</a></br>
+                       </div>
+                    </th>
+                </table>
+            </div>
+            <div>
+                <ul class="navbar-nav justify-content-end flex-grow-2 pe-3">
+                    <li>
+                        <button href="#" class="botao-escuro botao-foco-escuro" style="width:344px;"><i class="bi bi-newspaper"></i>   Dados Cadastrais</button>
+                    </li>
+                    <li>
+                        <button href="#" class="botao-escuro botao-foco-escuro" style="width:344px;"><i class="bi bi-fingerprint"></i>   Alterar Senha</button>
+                    </li>
+                    <li>
+                        <button href="#" class="botao-escuro botao-foco-escuro" style="width:344px;"><i class="bi bi-info-circle-fill"></i>   Sobre o WebClient</button>
+                    </li>
+                    <li>
+                        <button href="#" class="botao-escuro botao-foco-escuro" style="width:344px;"><i class="bi bi-door-closed-fill"></i>   Sair do WebClient</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h2>Collapsible Sidebar Using Bootstrap 4</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <div class="line"></div>
+
+            <h2>Lorem Ipsum Dolor</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <div class="line"></div>
+
+            <h2>Lorem Ipsum Dolor</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <div class="line"></div>
+
+            <h3>Lorem Ipsum Dolor</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script type="text/javascript">
+       $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+      });
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

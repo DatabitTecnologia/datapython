@@ -1,0 +1,7 @@
+Datapython
+
+C:\inetpub\wwwroot\datapython\datapython;C:\inetpub\wwwroot\datapython\models;C:\inetpub\wwwroot\datapython\dao;C:\inetpub\wwwroot\datapython\util;C:\inetpub\wwwroot\datapython\domain;C:\inetpub\wwwroot\datapython\API;C:\inetpub\wwwroot\datapython\models\tables;C:\inetpub\wwwroot\datapython\dao\tables;C:\inetpub\wwwroot\datapython\domain\tables;C:\inetpub\wwwroot\datapython\API\tables;C:\inetpub\wwwroot\datapython\models\views;C:\inetpub\wwwroot\datapython\dao\views;C:\inetpub\wwwroot\datapython\domain\views;C:\inetpub\wwwroot\datapython\API\views
+
+WebClient
+
+C:\inetpub\wwwroot\datapython\webclient;C:\inetpub\wwwroot\datapython\util;C:\inetpub\wwwroot\datapython\domain;C:\inetpub\wwwroot\datapython\API;C:\inetpub\wwwroot\datapython\domain\tables;C:\inetpub\wwwroot\datapython\API\tables;C:\inetpub\wwwroot\datapython\domain\views;C:\inetpub\wwwroot\datapython\API\views
