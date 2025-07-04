@@ -2007,7 +2007,6 @@ def delLocal():
   Fim rota: Local
 """
 
-
 """
   Rotas do WebService para a classe: Marca (TB01047)
 """
@@ -12772,11 +12771,112 @@ def findTecnicoVW():
   Fim rota: TecnicoVW
 """
 
+"""
+  Rotas do WebService para a classe: Subgrupo (TB01018)
+"""
+"""
+  Rotas do WebService para a classe: GrupoWebVW (VW02329)
+"""
+import grupowebvwDAO
 
 
+@app.route("/listGrupoWebVW/", methods=["POST"])
+def listGrupoWebVW():
+    resultado = grupowebvwDAO.GrupoWebVWDAO()
+    return resultado.listGrupoWebVW(request.json)
+
+
+@app.route("/dictGrupoWebVW/", methods=["POST"])
+def dictGrupoWebVW():
+    resultado = grupowebvwDAO.GrupoWebVWDAO()
+    return resultado.dictGrupoWebVW(request.json)
+
+
+@app.route("/fieldsGrupoWebVW/", methods=["POST"])
+def fieldsGrupoWebVW():
+    resultado = grupowebvwDAO.GrupoWebVWDAO()
+    return resultado.fieldsGrupoWebVW(request.json)
+
+
+@app.route("/findGrupoWebVW/", methods=["POST"])
+def findGrupoWebVW():
+    resultado = grupowebvwDAO.GrupoWebVWDAO()
+    return resultado.findGrupoWebVW(request.json)
 
 
 """
+  Fim rota: GrupoWebVW
+"""
+
+"""
+  Rotas do WebService para a classe: SubgrupoWebVW (VW02330)
+"""
+import subgrupowebvwDAO
+
+
+@app.route("/listSubgrupoWebVW/", methods=["POST"])
+def listSubgrupoWebVW():
+    resultado = subgrupowebvwDAO.SubgrupoWebVWDAO()
+    return resultado.listSubgrupoWebVW(request.json)
+
+
+@app.route("/dictSubgrupoWebVW/", methods=["POST"])
+def dictSubgrupoWebVW():
+    resultado = subgrupowebvwDAO.SubgrupoWebVWDAO()
+    return resultado.dictSubgrupoWebVW(request.json)
+
+
+@app.route("/fieldsSubgrupoWebVW/", methods=["POST"])
+def fieldsSubgrupoWebVW():
+    resultado = subgrupowebvwDAO.SubgrupoWebVWDAO()
+    return resultado.fieldsSubgrupoWebVW(request.json)
+
+
+@app.route("/findSubgrupoWebVW/", methods=["POST"])
+def findSubgrupoWebVW():
+    resultado = subgrupowebvwDAO.SubgrupoWebVWDAO()
+    return resultado.findSubgrupoWebVW(request.json)
+
+
+"""
+  Fim rota: SubgrupoWebVW
+"""
+
+"""
+  Rotas do WebService para a classe: MarcaWebVW (VW02331)
+"""
+import marcawebvwDAO
+
+
+@app.route("/listMarcaWebVW/", methods=["POST"])
+def listMarcaWebVW():
+    resultado = marcawebvwDAO.MarcaWebVWDAO()
+    return resultado.listMarcaWebVW(request.json)
+
+
+@app.route("/dictMarcaWebVW/", methods=["POST"])
+def dictMarcaWebVW():
+    resultado = marcawebvwDAO.MarcaWebVWDAO()
+    return resultado.dictMarcaWebVW(request.json)
+
+
+@app.route("/fieldsMarcaWebVW/", methods=["POST"])
+def fieldsMarcaWebVW():
+    resultado = marcawebvwDAO.MarcaWebVWDAO()
+    return resultado.fieldsMarcaWebVW(request.json)
+
+
+@app.route("/findMarcaWebVW/", methods=["POST"])
+def findMarcaWebVW():
+    resultado = marcawebvwDAO.MarcaWebVWDAO()
+    return resultado.findMarcaWebVW(request.json)
+
+
+"""
+  Fim rota: MarcaWebVW
+"""
+
+"""1    
   Rotas do WebService para a classe: Subgrupo (TB01018)
 """
 import subgrupoDAO
@@ -12785,7 +12885,7 @@ import subgrupoDAO
 @app.route("/listSubgrupo/", methods=["POST"])
 def listSubgrupo():
     resultado = subgrupoDAO.SubgrupoDAO()
-    return resultado.lbgrupo(request.json)
+    return resultado.listSubgrupo(request.json)
 
 
 @app.route("/dictSubgrupo/", methods=["POST"])
@@ -12834,11 +12934,469 @@ def delSubgrupo():
   Fim rota: Subgrupo
 """
 
+"""
+  Rotas do WebService para a classe: StatusNotificacao (TB01059)
+"""
+import statusnotificacaoDAO
+
+
+@app.route("/listStatusNotificacao/", methods=["POST"])
+def listStatusNotificacao():
+    resultado = statusnotificacaoDAO.StatusNotificacaoDAO()
+    return resultado.listStatusNotificacao(request.json)
+
+
+@app.route("/dictStatusNotificacao/", methods=["POST"])
+def dictStatusNotificacao():
+    resultado = statusnotificacaoDAO.StatusNotificacaoDAO()
+    return resultado.dictStatusNotificacao(request.json)
+
+
+@app.route("/fieldsStatusNotificacao/", methods=["POST"])
+def fieldsStatusNotificacao():
+    resultado = statusnotificacaoDAO.StatusNotificacaoDAO()
+    return resultado.fieldsStatusNotificacao(request.json)
+
+
+@app.route("/findStatusNotificacao/", methods=["POST"])
+def findStatusNotificacao():
+    resultado = statusnotificacaoDAO.StatusNotificacaoDAO()
+    return resultado.findStatusNotificacao(request.json)
+
+
+@app.route("/insStatusNotificacao", methods=["POST"])
+def insStatusNotificacao():
+    resultado = statusnotificacaoDAO.StatusNotificacaoDAO()
+    return resultado.insStatusNotificacao(request.json)
+
+
+@app.route("/updStatusNotificacao", methods=["POST"])
+def updStatusNotificacao():
+    resultado = statusnotificacaoDAO.StatusNotificacaoDAO()
+    return resultado.updStatusNotificacao(request.json)
+
+
+@app.route("/delStatusNotificacao", methods=["POST"])
+def delStatusNotificacao():
+    resultado = statusnotificacaoDAO.StatusNotificacaoDAO()
+    return resultado.delStatusNotificacao(request.json)
+
+
+"""
+  Fim rota: StatusNotificacao
+"""
+
+"""
+  Rotas do WebService para a classe: StatusWorkflow (TB01057)
+"""
+import statusworkflowDAO
+
+
+@app.route("/listStatusWorkflow/", methods=["POST"])
+def listStatusWorkflow():
+    resultado = statusworkflowDAO.StatusWorkflowDAO()
+    return resultado.listStatusWorkflow(request.json)
+
+
+@app.route("/dictStatusWorkflow/", methods=["POST"])
+def dictStatusWorkflow():
+    resultado = statusworkflowDAO.StatusWorkflowDAO()
+    return resultado.dictStatusWorkflow(request.json)
+
+
+@app.route("/fieldsStatusWorkflow/", methods=["POST"])
+def fieldsStatusWorkflow():
+    resultado = statusworkflowDAO.StatusWorkflowDAO()
+    return resultado.fieldsStatusWorkflow(request.json)
+
+
+@app.route("/findStatusWorkflow/", methods=["POST"])
+def findStatusWorkflow():
+    resultado = statusworkflowDAO.StatusWorkflowDAO()
+    return resultado.findStatusWorkflow(request.json)
+
+
+@app.route("/insStatusWorkflow", methods=["POST"])
+def insStatusWorkflow():
+    resultado = statusworkflowDAO.StatusWorkflowDAO()
+    return resultado.insStatusWorkflow(request.json)
+
+
+@app.route("/updStatusWorkflow", methods=["POST"])
+def updStatusWorkflow():
+    resultado = statusworkflowDAO.StatusWorkflowDAO()
+    return resultado.updStatusWorkflow(request.json)
+
+
+@app.route("/delStatusWorkflow", methods=["POST"])
+def delStatusWorkflow():
+    resultado = statusworkflowDAO.StatusWorkflowDAO()
+    return resultado.delStatusWorkflow(request.json)
+
+
+"""
+  Fim rota: StatusWorkflow
+"""
+
+"""
+  Rotas do WebService para a classe: StatusWorkflowVW (VW01036)
+"""
+import statusworkflowvwDAO
+
+
+@app.route("/listStatusWorkflowVW/", methods=["POST"])
+def listStatusWorkflowVW():
+    resultado = statusworkflowvwDAO.StatusWorkflowVWDAO()
+    return resultado.listStatusWorkflowVW(request.json)
+
+
+@app.route("/dictStatusWorkflowVW/", methods=["POST"])
+def dictStatusWorkflowVW():
+    resultado = statusworkflowvwDAO.StatusWorkflowVWDAO()
+    return resultado.dictStatusWorkflowVW(request.json)
+
+
+@app.route("/fieldsStatusWorkflowVW/", methods=["POST"])
+def fieldsStatusWorkflowVW():
+    resultado = statusworkflowvwDAO.StatusWorkflowVWDAO()
+    return resultado.fieldsStatusWorkflowVW(request.json)
+
+
+@app.route("/findStatusWorkflowVW/", methods=["POST"])
+def findStatusWorkflowVW():
+    resultado = statusworkflowvwDAO.StatusWorkflowVWDAO()
+    return resultado.findStatusWorkflowVW(request.json)
+
+
+"""
+  Fim rota: StatusWorkflowVW
+"""
+
+"""
+  Rotas do WebService para a classe: StatusUser (TB01060)
+"""
+import statususerDAO
+
+
+@app.route("/listStatusUser/", methods=["POST"])
+def listStatusUser():
+    resultado = statususerDAO.StatusUserDAO()
+    return resultado.listStatusUser(request.json)
+
+
+@app.route("/dictStatusUser/", methods=["POST"])
+def dictStatusUser():
+    resultado = statususerDAO.StatusUserDAO()
+    return resultado.dictStatusUser(request.json)
+
+
+@app.route("/fieldsStatusUser/", methods=["POST"])
+def fieldsStatusUser():
+    resultado = statususerDAO.StatusUserDAO()
+    return resultado.fieldsStatusUser(request.json)
+
+
+@app.route("/findStatusUser/", methods=["POST"])
+def findStatusUser():
+    resultado = statususerDAO.StatusUserDAO()
+    return resultado.findStatusUser(request.json)
+
+
+@app.route("/insStatusUser", methods=["POST"])
+def insStatusUser():
+    resultado = statususerDAO.StatusUserDAO()
+    return resultado.insStatusUser(request.json)
+
+
+@app.route("/updStatusUser", methods=["POST"])
+def updStatusUser():
+    resultado = statususerDAO.StatusUserDAO()
+    return resultado.updStatusUser(request.json)
+
+
+@app.route("/delStatusUser", methods=["POST"])
+def delStatusUser():
+    resultado = statususerDAO.StatusUserDAO()
+    return resultado.delStatusUser(request.json)
+
+
+"""
+  Fim rota: StatusUser
+"""
+
+"""
+  Rotas do WebService para a classe: StatusWorkflowOsVW (VW01151)
+"""
+import statusworkflowosvwDAO
+
+
+@app.route("/listStatusWorkflowOsVW/", methods=["POST"])
+def listStatusWorkflowOsVW():
+    resultado = statusworkflowosvwDAO.StatusWorkflowOsVWDAO()
+    return resultado.listStatusWorkflowOsVW(request.json)
+
+
+@app.route("/dictStatusWorkflowOsVW/", methods=["POST"])
+def dictStatusWorkflowOsVW():
+    resultado = statusworkflowosvwDAO.StatusWorkflowOsVWDAO()
+    return resultado.dictStatusWorkflowOsVW(request.json)
+
+
+@app.route("/fieldsStatusWorkflowOsVW/", methods=["POST"])
+def fieldsStatusWorkflowOsVW():
+    resultado = statusworkflowosvwDAO.StatusWorkflowOsVWDAO()
+    return resultado.fieldsStatusWorkflowOsVW(request.json)
+
+
+@app.route("/findStatusWorkflowOsVW/", methods=["POST"])
+def findStatusWorkflowOsVW():
+    resultado = statusworkflowosvwDAO.StatusWorkflowOsVWDAO()
+    return resultado.findStatusWorkflowOsVW(request.json)
+
+
+"""
+  Fim rota: StatusWorkflowOsVW
+"""
+
+"""
+  Rotas do WebService para a classe: MarcaCompatibilidadeVW (VW01152)
+"""
+import marcacompatibilidadevwDAO
+
+
+@app.route("/listMarcaCompatibilidadeVW/", methods=["POST"])
+def listMarcaCompatibilidadeVW():
+    resultado = marcacompatibilidadevwDAO.MarcaCompatibilidadeVWDAO()
+    return resultado.listMarcaCompatibilidadeVW(request.json)
+
+
+@app.route("/dictMarcaCompatibilidadeVW/", methods=["POST"])
+def dictMarcaCompatibilidadeVW():
+    resultado = marcacompatibilidadevwDAO.MarcaCompatibilidadeVWDAO()
+    return resultado.dictMarcaCompatibilidadeVW(request.json)
+
+
+@app.route("/fieldsMarcaCompatibilidadeVW/", methods=["POST"])
+def fieldsMarcaCompatibilidadeVW():
+    resultado = marcacompatibilidadevwDAO.MarcaCompatibilidadeVWDAO()
+    return resultado.fieldsMarcaCompatibilidadeVW(request.json)
+
+
+@app.route("/findMarcaCompatibilidadeVW/", methods=["POST"])
+def findMarcaCompatibilidadeVW():
+    resultado = marcacompatibilidadevwDAO.MarcaCompatibilidadeVWDAO()
+    return resultado.findMarcaCompatibilidadeVW(request.json)
+
+
+"""
+  Fim rota: MarcaCompatibilidadeVW
+"""
+
+"""
+  Rotas do WebService para a classe: PropostaDevolucao (TB02309)
+"""
+import propostadevolucaoDAO
+
+
+@app.route("/listPropostaDevolucao/", methods=["POST"])
+def listPropostaDevolucao():
+    resultado = propostadevolucaoDAO.PropostaDevolucaoDAO()
+    return resultado.listPropostaDevolucao(request.json)
+
+
+@app.route("/dictPropostaDevolucao/", methods=["POST"])
+def dictPropostaDevolucao():
+    resultado = propostadevolucaoDAO.PropostaDevolucaoDAO()
+    return resultado.dictPropostaDevolucao(request.json)
+
+
+@app.route("/fieldsPropostaDevolucao/", methods=["POST"])
+def fieldsPropostaDevolucao():
+    resultado = propostadevolucaoDAO.PropostaDevolucaoDAO()
+    return resultado.fieldsPropostaDevolucao(request.json)
+
+
+@app.route("/findPropostaDevolucao/", methods=["POST"])
+def findPropostaDevolucao():
+    resultado = propostadevolucaoDAO.PropostaDevolucaoDAO()
+    return resultado.findPropostaDevolucao(request.json)
+
+
+@app.route("/insPropostaDevolucao", methods=["POST"])
+def insPropostaDevolucao():
+    resultado = propostadevolucaoDAO.PropostaDevolucaoDAO()
+    return resultado.insPropostaDevolucao(request.json)
+
+
+@app.route("/updPropostaDevolucao", methods=["POST"])
+def updPropostaDevolucao():
+    resultado = propostadevolucaoDAO.PropostaDevolucaoDAO()
+    return resultado.updPropostaDevolucao(request.json)
+
+
+@app.route("/delPropostaDevolucao", methods=["POST"])
+def delPropostaDevolucao():
+    resultado = propostadevolucaoDAO.PropostaDevolucaoDAO()
+    return resultado.delPropostaDevolucao(request.json)
+
+
+"""
+  Fim rota: PropostaDevolucao
+"""
+
+"""
+  Rotas do WebService para a classe: BrowseEquipProVW (VW02332)
+"""
+import browseequipprovwDAO
+
+
+@app.route("/listBrowseEquipProVW/", methods=["POST"])
+def listBrowseEquipProVW():
+    resultado = browseequipprovwDAO.BrowseEquipProVWDAO()
+    return resultado.listBrowseEquipProVW(request.json)
+
+
+@app.route("/fieldsBrowseEquipProVW/", methods=["POST"])
+def fieldsBrowseEquipProVW():
+    resultado = browseequipprovwDAO.BrowseEquipProVWDAO()
+    return resultado.fieldsBrowseEquipProVW(request.json)
+
+
+@app.route("/findBrowseEquipProVW/", methods=["POST"])
+def findBrowseEquipProVW():
+    resultado = browseequipprovwDAO.BrowseEquipProVWDAO()
+    return resultado.findBrowseEquipProVW(request.json)
+
+
+"""
+  Fim rota: BrowseEquipProVW
+"""
+
+"""
+  Rotas do WebService para a classe: BrowseEquipTotalProVW (VW02333)
+"""
+import browseequiptotalprovwDAO
+
+
+@app.route("/listBrowseEquipTotalProVW/", methods=["POST"])
+def listBrowseEquipTotalProVW():
+    resultado = browseequiptotalprovwDAO.BrowseEquipTotalProVWDAO()
+    return resultado.listBrowseEquipTotalProVW(request.json)
+
+
+@app.route("/dictBrowseEquipTotalProVW/", methods=["POST"])
+def dictBrowseEquipTotalProVW():
+    resultado = browseequiptotalprovwDAO.BrowseEquipTotalProVWDAO()
+    return resultado.dictBrowseEquipTotalProVW(request.json)
+
+
+@app.route("/fieldsBrowseEquipTotalProVW/", methods=["POST"])
+def fieldsBrowseEquipTotalProVW():
+    resultado = browseequiptotalprovwDAO.BrowseEquipTotalProVWDAO()
+    return resultado.fieldsBrowseEquipTotalProVW(request.json)
+
+
+@app.route("/findBrowseEquipTotalProVW/", methods=["POST"])
+def findBrowseEquipTotalProVW():
+    resultado = browseequiptotalprovwDAO.BrowseEquipTotalProVWDAO()
+    return resultado.findBrowseEquipTotalProVW(request.json)
+
+
+"""
+  Fim rota: BrowseEquipTotalProVW
+"""
+
+"""
+  Rotas do WebService para a classe: ProdutoFotoVW (VW00004)
+"""
+import produtofotovwDAO
+
+
+@app.route("/listProdutoFotoVW/", methods=["POST"])
+def listProdutoFotoVW():
+    resultado = produtofotovwDAO.ProdutoFotoVWDAO()
+    return resultado.listProdutoFotoVW(request.json)
+
+
+@app.route("/dictProdutoFotoVW/", methods=["POST"])
+def dictProdutoFotoVW():
+    resultado = produtofotovwDAO.ProdutoFotoVWDAO()
+    return resultado.dictProdutoFotoVW(request.json)
+
+
+@app.route("/fieldsProdutoFotoVW/", methods=["POST"])
+def fieldsProdutoFotoVW():
+    resultado = produtofotovwDAO.ProdutoFotoVWDAO()
+    return resultado.fieldsProdutoFotoVW(request.json)
+
+
+@app.route("/findProdutoFotoVW/", methods=["POST"])
+def findProdutoFotoVW():
+    resultado = produtofotovwDAO.ProdutoFotoVWDAO()
+    return resultado.findProdutoFotoVW(request.json)
+
+
+"""
+  Fim rota: ProdutoFotoVW
+"""
+
+"""
+  Rotas do WebService para a classe: ProdutoAvaliacao (TB01163)
+"""
+import produtoavaliacaoDAO
+
+
+@app.route("/listProdutoAvaliacao/", methods=["POST"])
+def listProdutoAvaliacao():
+    resultado = produtoavaliacaoDAO.ProdutoAvaliacaoDAO()
+    return resultado.listProdutoAvaliacao(request.json)
+
+
+@app.route("/dictProdutoAvaliacao/", methods=["POST"])
+def dictProdutoAvaliacao():
+    resultado = produtoavaliacaoDAO.ProdutoAvaliacaoDAO()
+    return resultado.dictProdutoAvaliacao(request.json)
+
+
+@app.route("/fieldsProdutoAvaliacao/", methods=["POST"])
+def fieldsProdutoAvaliacao():
+    resultado = produtoavaliacaoDAO.ProdutoAvaliacaoDAO()
+    return resultado.fieldsProdutoAvaliacao(request.json)
+
+
+@app.route("/findProdutoAvaliacao/", methods=["POST"])
+def findProdutoAvaliacao():
+    resultado = produtoavaliacaoDAO.ProdutoAvaliacaoDAO()
+    return resultado.findProdutoAvaliacao(request.json)
+
+
+@app.route("/insProdutoAvaliacao", methods=["POST"])
+def insProdutoAvaliacao():
+    resultado = produtoavaliacaoDAO.ProdutoAvaliacaoDAO()
+    return resultado.insProdutoAvaliacao(request.json)
+
+
+@app.route("/updProdutoAvaliacao", methods=["POST"])
+def updProdutoAvaliacao():
+    resultado = produtoavaliacaoDAO.ProdutoAvaliacaoDAO()
+    return resultado.updProdutoAvaliacao(request.json)
+
+
+@app.route("/delProdutoAvaliacao", methods=["POST"])
+def delProdutoAvaliacao():
+    resultado = produtoavaliacaoDAO.ProdutoAvaliacaoDAO()
+    return resultado.delProdutoAvaliacao(request.json)
+
+
+"""
+  Fim rota: ProdutoAvaliacao
+"""
+
 
 @app.route("/")
 def hello_world():
     return "<p>Ola</p>"
 
+
 if __name__ == "__main__":
     app.run(debug=True, port=8877)
-
