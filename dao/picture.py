@@ -80,18 +80,28 @@ class Picture:
                 field = ""
 
             try:
+                functiontable = df_params.loc["functiontable", 0]
+            except:
+                functiontable = "N"
+
+            try:
                 sbase64 = df_params.loc["base64", 0]
                 hexstr = str(base64.b64decode(sbase64).hex())
                 hexstr = "0x" + hexstr.replace("'", "")
             except:
                 hexstr = ""
 
-            ssql = "SELECT row_number() over (order by {} asc) - 1 as id, {} REPLACE(REPLACE((SELECT CAST(case when {} is not null then {} else '{}' end as image) as FOTO " \
-                   " FROM {} AS B WHERE B.{} = {}.{}  FOR XML  PATH(''), BINARY BASE64)," \
-                   " '<FOTO>',''),'</FOTO>','') AS picture " \
-                   " FROM {} {}".format(fieldpk, fieldslist, field, field, hexstr, table, fieldpk, table, fieldpk,
-                                        table, where)
 
+            if (functiontable == "N"):
+                ssql = "SELECT row_number() over (order by {} asc) - 1 as id, {} REPLACE(REPLACE((SELECT CAST(case when {} is not null then {} else '{}' end as image) as FOTO " \
+                       " FROM {} AS B WHERE B.{} = {}.{}  FOR XML  PATH(''), BINARY BASE64)," \
+                       " '<FOTO>',''),'</FOTO>','') AS picture " \
+                       " FROM {} {}".format(fieldpk, fieldslist, field, field, hexstr, table, fieldpk, table, fieldpk,
+                                            table, where)
+            else:
+                ssql = "SELECT {} as picture,{} FROM {} {}".format(field, fieldslist[:-1], table, where)
+
+            print(ssql)
             dados_picture = connect.dataconnect(stoken, 0)
             cursor_picture = dados_picture.cursor()
             cursor_picture.execute(ssql)

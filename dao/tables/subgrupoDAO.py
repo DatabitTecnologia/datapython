@@ -14,10 +14,9 @@ import log
 class SubgrupoDAO(dao.Dao):
 
     def __init__(self):
-        super().__init__("TB01018", "SubGrupo", "o", "SubGrupos de Produtos", "S", "S", "S", "VW01005")
+        super().__init__("TB01018", "Subgrupo", "o", "SubGrupos de Produtos", "S", "S", "S", "TB01018")
 
     def listSubgrupo(self, params):
-        print(params)
         """
         Metodo de listagem de subgrupo tendo o título das colunas como "atributos da classe"
 
