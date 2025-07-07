@@ -13393,10 +13393,66 @@ def delProdutoAvaliacao():
 """
 
 
+
+
+
+"""
+  Rotas do WebService para a classe: ProdutoFavorito (TB01164)
+"""
+import produtofavoritoDAO
+
+
+@app.route("/listProdutoFavorito/", methods=["POST"])
+def listProdutoFavorito():
+    resultado = produtofavoritoDAO.ProdutoFavoritoDAO()
+    return resultado.listProdutoFavorito(request.json)
+
+
+@app.route("/dictProdutoFavorito/", methods=["POST"])
+def dictProdutoFavorito():
+    resultado = produtofavoritoDAO.ProdutoFavoritoDAO()
+    return resultado.dictProdutoFavorito(request.json)
+
+
+@app.route("/fieldsProdutoFavorito/", methods=["POST"])
+def fieldsProdutoFavorito():
+    resultado = produtofavoritoDAO.ProdutoFavoritoDAO()
+    return resultado.fieldsProdutoFavorito(request.json)
+
+
+@app.route("/findProdutoFavorito/", methods=["POST"])
+def findProdutoFavorito():
+    resultado = produtofavoritoDAO.ProdutoFavoritoDAO()
+    return resultado.findProdutoFavorito(request.json)
+
+
+@app.route("/insProdutoFavorito", methods=["POST"])
+def insProdutoFavorito():
+    resultado = produtofavoritoDAO.ProdutoFavoritoDAO()
+    return resultado.insProdutoFavorito(request.json)
+
+
+@app.route("/updProdutoFavorito", methods=["POST"])
+def updProdutoFavorito():
+    resultado = produtofavoritoDAO.ProdutoFavoritoDAO()
+    return resultado.updProdutoFavorito(request.json)
+
+
+@app.route("/delProdutoFavorito", methods=["POST"])
+def delProdutoFavorito():
+    resultado = produtofavoritoDAO.ProdutoFavoritoDAO()
+    return resultado.delProdutoFavorito(request.json)
+
+
+"""
+  Fim rota: ProdutoFavorito
+"""
+
+
 @app.route("/")
 def hello_world():
     return "<p>Ola</p>"
 
-
 if __name__ == "__main__":
     app.run(debug=True, port=8877)
+
